@@ -19,5 +19,3 @@ export class PopupComponent {
     this.hideEdit()
   }
 }
-
-//todo delete
