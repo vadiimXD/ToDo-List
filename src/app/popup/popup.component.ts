@@ -13,10 +13,11 @@ export class PopupComponent {
     popup.style.display = "none"
   }
   updateItem(item: string) {
-
     const input: any = document.querySelector(".popup-input");
     const completedItem = db.filter(x => x.name == input.dataset.value);
     completedItem[0].name = item
     this.hideEdit()
   }
 }
+
+//todo delete
