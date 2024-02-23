@@ -26,6 +26,11 @@ export class ToDoComponent {
     const isShowed = popup.style.display == "none" ? "flex" : "none"
     popup.style.display = isShowed
   }
+
+  deleteItem(itemObj: item) {
+    const startIndex: number = db.indexOf(itemObj)
+    db.splice(startIndex, 1)
+  }
 }
 
 

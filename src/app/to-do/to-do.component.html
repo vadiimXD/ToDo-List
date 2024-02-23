@@ -13,7 +13,7 @@
                     <button class="complete" (click)="completeItem(item.name)">COMPLETE<i
                             class="fas fa-check"></i></button>
                     <button class="edit" (click)="showEdit($event,item)">EDIT</button>
-                    <button class="delete">DELETE<i class="fas fa-times"></i></button>
+                    <button class="delete" (click)="deleteItem(item)">DELETE<i class="fas fa-times"></i></button>
                 </div>
             </li>
         </ul>
