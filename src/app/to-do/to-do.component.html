@@ -1,0 +1,23 @@
+<div class="todo">
+    <div class="header">
+        <h1>ToDo List</h1>
+        <input type="text" class="todo-input" placeholder="Write your todo list here..." #item>
+        <button class="btn-add" (click)="createToDoItem(item)">Add</button>
+    </div>
+    <div class="todolist">
+        <h3>List of Works Todo:</h3>
+        <p class="error-info"></p>
+        <ul>
+            <li [class.completed]="item.isCompleted" *ngFor="let item of ToDoList">{{item.name}}
+                <div class="tools">
+                    <button class="complete" (click)="completeItem(item.name)">COMPLETE<i
+                            class="fas fa-check"></i></button>
+                    <button class="edit" (click)="showEdit($event,item)">EDIT</button>
+                    <button class="delete">DELETE<i class="fas fa-times"></i></button>
+                </div>
+            </li>
+        </ul>
+    </div>
+</div>
+
+<app-popup style="display: none;" />
